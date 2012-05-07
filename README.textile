@@ -12,11 +12,12 @@ fftunnel is a simple bash script that:
 * kills the SSH tunnel when Firefox is closed 
 
 h3. Setup
+
 h4. Create a Firefox Profile
 * Start the profile manager using your CLI:
 <pre>
-firefox -ProfileManager
-<pre>
+$ firefox -ProfileManager
+</pre>
 * Click Create Profile.
 * Click Next.
 * Name the profile "Secure".
