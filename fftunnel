@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# fftunnel- super easy encrypted browsing.
+#    Materials: ssh public key copied to remote authorized_keys file
+#               A Firefox settings profile configured for SOCKS5 proxy
+#
+# Amin Astaneh, amin@aminastaneh.net, 2012
+
+FORWARDING_PORT=9999
+
+if [[ -z "${1}" ]]; then
+	echo "Usage: $0 user@hostname <other_options>"
+	exit 1
+fi
+
+ssh -ND $FORWARDING_PORT $@ &
+PID=$!
+firefox -P Secure
+kill $PID

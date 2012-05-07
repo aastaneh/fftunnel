@@ -1,0 +1,41 @@
+h2. fftunnel - a simple SOCKS5 proxy script using Firefox
+
+Amin Astaneh <amin@aminastaneh.net>
+Copyright (C) 2012
+
+h3. Description
+
+fftunnel is a simple bash script that:
+
+* instantiates a SSH tunnel to the host you specify on localhost:9999
+* starts Firefox with a special user profile called 'Secure'
+* kills the SSH tunnel when Firefox is closed 
+
+h3. Setup
+h4. Create a Firefox Profile
+* Start the profile manager using your CLI:
+<pre>
+firefox -ProfileManager
+<pre>
+* Click Create Profile.
+* Click Next.
+* Name the profile "Secure".
+* Click Finish.
+* Back in the Profile Manager, select the new profile "Secure" and click "Start Firefox".
+* Go to "Edit->Preferences".
+* Go to Tab "Advanced->Network".
+* Click "Configure how Firefox connects to the Internet".
+* Select "Manual proxy configuration", under "Socks Host" type "127.0.0.1", port "9999". 
+* Make sure SOCKS5 is selected.
+* Click "OK", close Firefox Preferences.
+
+h4. Install Your SSH Public Key on the Remote Host
+If you don't know how to do this, there are many online guides available to show you how.
+
+h3. Usage
+<pre>
+$ fftunnel user@server (additional options)
+</pre>
+Since this wraps around the ssh binary, you can use options such as '-p' to specify port.
+
+Have Fun!
