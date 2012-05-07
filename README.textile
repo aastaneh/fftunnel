@@ -31,12 +31,15 @@ $ firefox -ProfileManager
 * Click "OK", close Firefox Preferences.
 
 h4. Install Your SSH Public Key on the Remote Host
+
 If you don't know how to do this, there are many online guides available to show you how.
 
 h3. Usage
+
 <pre>
 $ fftunnel user@server (additional options)
 </pre>
+
 Since this wraps around the ssh binary, you can use options such as '-p' to specify port.
 
 Have Fun!
