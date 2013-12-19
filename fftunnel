@@ -32,7 +32,12 @@ if [[ -z "${1}" ]]; then
 	exit 1
 fi
 
+if [[ `uname` == 'Darwin' ]]; then
+  FIREFOX="/Applications/Firefox.app/Contents/MacOS/firefox-bin -p Secure"
+else
+  FIREFOX="firefox -P Secure"
+fi
 ssh -ND $FORWARDING_PORT $@ &
 PID=$!
-firefox -P Secure
+`${FIREFOX}`
 kill $PID
