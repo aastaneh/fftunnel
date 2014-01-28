@@ -15,9 +15,14 @@ h3. Setup
 
 h4. Create a Firefox Profile
 * Start the profile manager using your CLI:
+Linux:
 <pre>
 $ firefox -ProfileManager
 </pre>
+Mac:
+<pre>
+$ /Applications/Firefox.app/Contents/MacOS/firefox-bin -p
+</pre> 
 * Click Create Profile.
 * Click Next.
 * Name the profile "Secure".
