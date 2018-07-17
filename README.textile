@@ -28,9 +28,9 @@ $ /Applications/Firefox.app/Contents/MacOS/firefox-bin -p
 * Name the profile "Secure".
 * Click Finish.
 * Back in the Profile Manager, select the new profile "Secure" and click "Start Firefox".
-* Go to "Edit->Preferences".
-* Go to Tab "Advanced->Network".
-* Click "Configure how Firefox connects to the Internet".
+* Go to "Edit->Preferences". (Firefox -> Preferences on macOS)
+* Scroll to the bottom of the "General" tab, to "Network Proxy"
+* Click "Settings" next to "Configure how Firefox connects to the Internet".
 * Select "Manual proxy configuration", under "Socks Host" type "127.0.0.1", port "9999". 
 * Make sure SOCKS5 is selected.
 * Click "OK", close Firefox Preferences.
